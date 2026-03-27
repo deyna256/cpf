@@ -20,7 +20,7 @@ vector<int64_t> kmp(string text, string pattern){
     vector<int64_t> pi = prefix_function(s);
     vector<int64_t> ans;
     for (int i = pattern.size()+1;i<s.size();i++){
-        if (pi[i] == pattern.size()) ans.push_back(i-2*pattern.size);
+        if (pi[i] == pattern.size()) ans.push_back(i-2*pattern.size());
     }
     return ans;
 }
