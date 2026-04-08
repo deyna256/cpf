@@ -11,6 +11,8 @@ int damerau_levenshtein(const std::string& s1, const std::string& s2) {
     for (int j = 0; j <= len2; ++j) dp[0][j] = j;
 
     for (int i = 1; i <= len1; ++i) {
+        
+        
         for (int j = 1; j <= len2; ++j) {
             int cost = (s1[i - 1] == s2[j - 1]) ? 0 : 1;
 
